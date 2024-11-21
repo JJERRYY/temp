@@ -1,0 +1,113 @@
+program: sweep_interface.py
+method: grid
+name: clean
+metric:
+    name: bkd_acc
+    goal: maximize
+parameters:
+    dataset:
+        value: 'cifar10'
+    model:
+        value: 'resnet18'
+    pin_memory:
+        value: false
+    seed:
+        value: 0
+    lr:
+        value: 0.05
+    gamma:
+        value: 1
+    lr_method:
+        value: 'linear'
+    target_lr:
+        value: 0.1
+    momentum:
+        value: 0.9
+    decay:
+        value: 0.0005
+    batch_size:
+        value: 64
+    test_batch_size:
+        value: 1024
+    num_worker:
+        value: 0
+    poison_start_epoch:
+        value: 500
+    epochs:
+        value: 101
+    end_poison_epochs:
+        value: 101
+    num_total_participants:
+        value: 100
+    num_adversaries:
+        value: 1
+    num_sampled_participants:
+        value: 10
+    sample_method:
+        value: 'attack_rounds_frequency'
+    sample_poison_ratio:
+        value: 0
+    dirichlet_alpha:
+        value: 0.9
+    retrain_times:
+        value: 2
+    is_poison:
+        value: True
+    attacker_retrain_times:
+        value: 2
+    save_every:
+        value: 100
+    trigger_size:
+        value: 5
+    attacker:
+        value: 'max-feature-map_generator'
+    attack_rounds:
+        value: []
+    attack_frequency:
+        value: 10
+    attacker_method:
+        value: 'sin-adv'
+    malicious_update_method:
+        value: 'label'
+    agg_method:
+        value: 'avg'
+    defense_technique:
+        value: 'none'
+    clip_factor:
+        value: 1
+    norm_bound:
+        value: 1
+    attacker_lr_decay:
+        value: 5
+    target_class:
+        value: 8
+    bkd_ratio:
+        value: 0.25
+    trigger_outter_epochs:
+        value: 200
+    trigger_lr:
+        value: 0.01
+    load_benign_model:
+        value: True
+    adv_loss:
+        value: 'ce'
+    dm_type:
+        value: 'none'
+    dm_adv_epochs:
+        value: 5
+    dm_adv_K:
+        value: 1
+    dm_adv_model_count:
+        value: 1
+    noise_model_count:
+        value: 9
+    noise_loss_lambda:
+        value: 0.01
+    wp_factor:
+        value: 0.05
+    attack_alpha:
+        value: 0.993
+    d2ba_lambda:
+        value: 5
+    note:
+        value: ''
