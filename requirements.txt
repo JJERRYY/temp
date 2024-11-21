@@ -1,0 +1,10 @@
+hdbscan==0.8.33
+matplotlib
+numpy
+Pillow==10.3.0
+prefetch_generator==1.0.3
+PyYAML==6.0.1
+ruamel.base==1.0.0
+scikit_learn
+scipy
+tqdm==4.65.2
